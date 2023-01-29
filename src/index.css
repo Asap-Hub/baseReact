@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(143, 143, 150);
+    background-color: rgb(119, 119, 126);
 }
 
 
@@ -9,5 +9,28 @@ h1{
 
 .main{
     background-color: rgb(252, 252, 252);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+}
+
+.button-div{ 
+display: flex;
+gap: 20px;
+margin-bottom: 50px;
+}
+
+.butt{
+    background: linear-gradient(rgb(68, 124, 68), rgb(11, 207, 11));
+    padding: 10px 10px;
+    border-radius: 1.0rem;
+    font-size: 1.0rem;
+    color: white;
+}
+
+.butt:hover{
+    background-color: rgb(50, 36, 36);
 }
 
