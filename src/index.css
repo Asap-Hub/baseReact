@@ -1,20 +1,21 @@
 body{
-    background-color: rgb(227, 227, 230);
+    background-color: rgb(243, 243, 250);
 }
 
 
 h1{
-    color: rgb(8, 7, 7);
+    color: rgb(255, 255, 255);
 }
 
 .main{
-    background-color: rgb(252, 252, 252);
+    background-color: rgb(14, 14, 23);
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     width: auto;
     height: auto;
+    color:rgb(255, 255, 255);
 }
 
 .button-div{ 

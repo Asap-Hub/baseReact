@@ -1,31 +1,22 @@
-function Props({ data }) {
+
+
+export default  function Props({ data, color, DeleteFunc }) {
   console.log(data);
   return (
-    <div className="props-div">
-      <div>
-        <table id="table">
-          <thead>
-            <tr>
-              <th>Id</th>
-              <th>Color</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-         
-            {data.map((item) => {
-                 <tbody>
-              <tr>
-                <td>{item.id}</td>
-                <td>{item.color}</td>
-                <td>{item.value}</td>
-              </tr>;
-              
-          </tbody>
-            })}
-          <tr></tr>
-        </table>
-      </div>
+    <div className= "props-div">
+  
+      {data.map((item) => (
+        
+        
+          <div className= "item-div">
+            <h3 id="color">{color}</h3>
+          <h2>ID: {item.id} </h2>
+          <h2>color: {item.color }</h2>
+          <h2>Value: {item.value}</h2> 
+          <button onClick={() => DeleteFunc(item.id)} > Delete</button>
+        </div>
+      ))}
     </div>
   );
 }
-export default Props;
+ 

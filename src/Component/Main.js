@@ -29,16 +29,51 @@ const [data, change] = useState(
     },
     {
         id: 4,
+      color: "cyan",
+      value: "#0ff",
+    },
+    {
+        id: 5,
+      color: "cyan",
+      value: "#0ff",
+    },
+    {
+        id: 6,
       color: "magenta",
       value: "#f0f",
     },
     {
-        id: 5,
+        id: 7,
       color: "yellow",
       value: "#ff0",
     },
     {
-        id: 6,
+        id: 8,
+      color: "yellow",
+      value: "#ff0",
+    },
+    {
+        id: 9,
+      color: "yellow",
+      value: "#ff0",
+    },
+    {
+        id: 10,
+      color: "black",
+      value: "#000",
+    },
+    {
+        id: 11,
+      color: "black",
+      value: "#000",
+    },
+    {
+        id: 12,
+      color: "black",
+      value: "#000",
+    },
+    {
+        id: 13,
       color: "black",
       value: "#000",
     },
@@ -55,10 +90,17 @@ const [data, change] = useState(
        countState(count - 1);
        console.log(count);
      }
+     //function for deleting item
 
+     const DeleteItem = (id) =>{
+
+      const removeItem = data.filter(item => item.id != id);
+      change(removeItem);
+     }
 
   return (
     <div className="main">
+      <header>
       <h1>we are starting harder.</h1>
       <h2>value: {count}</h2>
       <div className="button-div">
@@ -66,8 +108,11 @@ const [data, change] = useState(
       <button className="butt" onClick={decrease}>decrease me</button>
       </div>
       <div>
-        <Props data = {data}></Props>
+        <Props data = {data.filter(item => item.color == 'yellow')} color = "yellow" DeleteFunc = {DeleteItem}/>
+        <Props data = {data.filter(item => item.color == 'black')} color = "black" DeleteFunc = {DeleteItem}/>
+        <Props data = {data.filter(item => item.color !== 'black' || 'yellow')} color = "All" DeleteFunc = {DeleteItem} />
       </div>
+      </header>
     </div>
   );
 } 

@@ -1,9 +1,20 @@
 .props-div{
-background-color: rgb(250, 244, 245);
-justify-content: center;
-}
+ display: block;
+ flex-direction: column;
+ justify-content:space-around; 
 
-#table{
-    border: 1px solid black;
-    border-spacing: 20px;
+}
+ 
+.item-div{
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px 10px;
+
+
+}
+#color{
+    font-size: 1.5rem;
+    font-weight:bold;
+    font-style: italic;
 }
