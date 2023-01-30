@@ -9,7 +9,7 @@ export default  function Props({ data, color, DeleteFunc }) {
         
         
           <div className= "item-div">
-            <h3 id="color">{color}</h3>
+          <h3 id="color">{color}</h3>
           <h2>ID: {item.id} </h2>
           <h2>color: {item.color }</h2>
           <h2>Value: {item.value}</h2> 
